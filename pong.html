@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Student Name: Divendar Murtadak    -->
+<html lang="en">
+  <head>
+    <title>A Pong Game in JavaScript</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="pong.js"></script>
+  </head>
+  <body onload="initialize();" onmousemove="movePaddle(event);"  >
+  
+    <form>
+      <label>Slow<input type="radio" name="speed" value="25" id="slow" checked="checked" onclick="setSpeed(16);"/></label>
+      <label>Medium<input type="radio" name="speed" value="12" id="medium" onclick="setSpeed(8);"/></label>
+      <label>Fast<input type="radio" name="speed" value="5" id="fast" onclick="setSpeed(4);"/></label>
+      <input type="button" value="Reset" onclick="resetCounter();" />
+      <label>Score: <span id="message">0</span></label>
+      <br/><br/>
+      
+      <div id="court" style="border: solid black; cursor: none; width: 1100px; height: 600px;" onclick="startGame(event);">
+       	<p id="x" style="position: relative; left: 0px; top: 0px;"> 
+       		<img id="ball" src="http://lambda.uta.edu/cse5335/ball.gif" style="margin: 0; padding: 0px; position: relative; top: 0px; left:0px;" /> 
+       	</p>
+			<img id="paddleY" src="http://lambda.uta.edu/cse5335/paddle.gif" style="margin: 0; padding: 0; position: relative; left: 1000px;" />
+      </div>
+    </form>
+  </body>
+</html>
+
